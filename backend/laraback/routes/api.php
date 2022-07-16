@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MusicController;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\VideoController;
@@ -39,3 +40,7 @@ Route::post("/video/add", [VideoController::class, "addVideoToList"]);
 
 Route::get("/store/items", [StoreController::class, "getAllStoreItems"]);
 Route::post("/store/add-item", [StoreController::class, "addItemToStore"]);
+
+
+Route::get('/sliders' , [SliderController::class, "getAllSliderImages"]);
+Route::post('/slider/upload', [SliderController::class, "uploadSliderImage"]);
