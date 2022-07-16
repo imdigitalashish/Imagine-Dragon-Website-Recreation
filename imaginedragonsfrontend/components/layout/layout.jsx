@@ -16,9 +16,6 @@ export default function Layout(props) {
                 <img src="assets/images/imaginedragonslogo.png" alt=""/>
             </nav>
 
-
-
-
             <main>
                 {props.children}
             </main>

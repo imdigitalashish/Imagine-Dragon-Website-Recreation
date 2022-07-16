@@ -1,0 +1,13 @@
+.sliderOverride h3 {
+    color: white;
+}
+
+.sliderSingleSlide {
+    height: 70vh;
+}
+
+.sliderSingleSlide > img {
+    width: 100%;
+    
+    object-fit: cover;
+}

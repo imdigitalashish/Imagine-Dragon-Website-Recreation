@@ -18,3 +18,17 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+
+
+/* OVERRIDING SLIDER */
+.slick-dots {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.slick-dots li[class='slick-active']>button::before {
+  color: white;
+}
+.slick-dots li>button::before {
+  color: white;
+}
