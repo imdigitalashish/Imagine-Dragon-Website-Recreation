@@ -1,0 +1,81 @@
+.divBackground {
+    background-image: url("/assets/images/backgroundimage.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: OpacityAnimationForBackground 0.5s linear 0.5s 1 forwards;
+    height: 100vh;
+
+}
+
+
+.navbarStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* OVERLAY ANIMATION */
+
+
+
+@keyframes OpacityAnimationForBackground {
+    100% {
+        opacity: 1;
+    }
+}
+
+.overlayAnimation {
+
+    position: absolute;
+    width: 100vw;
+    top: 0;
+
+}
+
+.overlayAnimation>img {
+    position: absolute;
+}
+
+.overlayAnimation>img:nth-child(1) {
+    left: 0;
+    height: 100vh;
+    width: 55vw;
+    animation: slidingLeftAnimation 0.6s linear 0.4s 1 forwards;
+
+}
+
+
+.overlayAnimation>img:nth-child(2) {
+    right: 0;
+    height: 101vh;
+    width: 55vw;
+    animation: slidingRightAnimation 0.6s linear 0.4s 1 forwards;
+
+}
+
+@keyframes slidingLeftAnimation {
+  
+    100% {
+        left: -55vw;
+        opacity: 0.5;
+    }
+}
+
+@keyframes slidingRightAnimation {
+    100% {
+        right: -55vw;
+        opacity: 0.5;
+    }
+}
