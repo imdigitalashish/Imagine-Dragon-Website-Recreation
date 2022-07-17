@@ -5,7 +5,7 @@ import { larabackInstance } from '../../axiosInstance';
 import styles from "./merch-component.module.css";
 import SingleMerchComponent from './single-merch-component';
 
-export default function MusicSection() {
+export default function MerchSection() {
 
 
 

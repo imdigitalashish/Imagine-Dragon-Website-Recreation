@@ -10,10 +10,37 @@ export default function Layout(props) {
         }, 1000)
     }, []);
 
+
+    const navReferences = [useRef(), useRef(), useRef(), useRef(), useRef(), useRef()];
+    const navReferencesTo = ["home", "tour", "about", "music", "videos", "store"]
+    let textReferences = navReferencesTo.map((currentUseRef, i) => {
+        return (
+            <li key={i} onClick={(e) => handleNavItemPress(navReferences[i])} ref={navReferences[i]}>{navReferencesTo[i]}</li>
+        )
+    });
+    function handleNavItemPress(i) {
+        navReferences.forEach((e) => {
+            e.current.style = ""
+        })
+        i.current.style.color = "red";
+    }
+
+
     return (
         <div className={style.divBackground}>
+
+            <div className={style.logoContainer}>
+                <img src="assets/images/imaginedragonslogo.png" alt="" />
+
+            </div>
+
             <nav className={style.navbarStyle}>
-                <img src="assets/images/imaginedragonslogo.png" alt=""/>
+
+                <div className={style.navContainer}>
+                    <ul>
+                        {textReferences}
+                    </ul>
+                </div>
             </nav>
 
             <main>

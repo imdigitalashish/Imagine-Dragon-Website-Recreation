@@ -1,0 +1,26 @@
+.tourSection {
+    padding-top: 6rem;
+    text-align: center;
+    padding-bottom: 6rem;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.tourSection>h2 {
+    font-size: 5em;
+    color: white;
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+.tourSection>p {
+    padding-inline: 8em;
+    color: white;
+    font-size: 1.7em;
+}
+
+.tourCardHolder {
+    padding-top: 3em;
+    display: grid;
+    justify-items: center;
+    gap: 2em;
+}

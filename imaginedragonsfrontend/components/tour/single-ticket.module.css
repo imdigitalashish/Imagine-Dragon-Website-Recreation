@@ -1,0 +1,59 @@
+.singleCard {
+    background: #F4FFF7;
+    border-radius: 14px 14px 14px 14px;
+    display: grid;
+    width: 80vw;
+    grid-template-columns: 0.13fr 1.2fr 0.04fr;
+
+}
+
+.leftCard {
+    background: rgba(197, 29, 54, 1);
+    border-radius: 14px 0px 0px 14px;
+    height: 100%;
+
+}
+
+.rightCard {
+    height: 100%;
+    background: rgba(197, 29, 54, 1);
+    border-radius: 0px 11px 11px 0px;
+}
+
+.middleCard {
+    display: flex;
+    align-items: center;
+    padding-top: 1.5em;
+    justify-content: center;
+    gap: 2em;
+    padding-inline-start: 2em;
+}
+
+.middleCardAddressHolder {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+}
+
+.middleCardAddressHolder>p:nth-child(1) {
+    font-weight: 500;
+    font-size: 1.4em;
+
+}
+
+.middleCardAddressHolder>p:nth-child(2) {
+    font-weight: 500;
+    font-size: 1.8em;
+
+}
+
+.ticketHolder {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+#tickerCounter {
+    height: 3em;
+}

@@ -1,7 +1,9 @@
 import React from 'react'
 import Slider from "react-slick";
 import { larabackInstance } from '../axiosInstance';
-import MusicSection from '../components/merch/merch-component';
+import MerchSection from '../components/merch/merch-component';
+import MusicSection from '../components/music/music-section';
+import TourSection from '../components/tour/tour-section';
 
 import styles from "./index.module.css";
 
@@ -43,8 +45,11 @@ export default function Home(props) {
       </div>
 
 
+      <MerchSection />
+
       <MusicSection />
 
+      <TourSection />
 
     </div>
   )

@@ -24,6 +24,14 @@ class MusicController extends Controller
                 $jsonObject = $request->all();
                 unset($jsonObject["token"]);
                 // 
+                $fileUploaded = $request->file("music_thumbnail_link")->store("public/music_images");
+                $fileUploaded = explode("/", $fileUploaded)[2];
+
+                $fileUploaded = "storage/music_images/" . $fileUploaded;
+
+                $jsonObject["music_thumbnail_link"] = $fileUploaded;
+
+
                 Music::insert($jsonObject);
                 return response()->json(["response" => "Your music was successfully added"]);
             } else {
@@ -33,6 +41,4 @@ class MusicController extends Controller
             return response()->json(["response" => "Somethign went wrong"]);
         }
     }
-
-    
 }
