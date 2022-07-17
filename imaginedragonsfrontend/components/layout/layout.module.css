@@ -1,9 +1,5 @@
 .divBackground {
-    background-image: url("/assets/images/backgroundimage.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    animation: OpacityAnimationForBackground 0.5s linear 0.5s 1 forwards;
-    height: 100vh;
+
 
 }
 

@@ -1,0 +1,51 @@
+.cardContainer {
+    height: 500px;
+    width: 500px;
+    background: #FFFFFF;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 23px;
+    -moz-border-radius: 23px;
+    -webkit-border-radius: 23px;
+    position: relative;
+
+}
+
+.cardContainer > img {
+    width: 100%;
+    object-fit: cover;
+    height: 80%;
+    border-radius: 23px;
+
+}
+
+
+
+
+
+.overlay {
+    top: 0;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    opacity: 0;
+    transition: all linear 0.2s;
+    border-radius: 23px;
+    color: white;
+    padding-top: 6em;
+
+}
+
+.overlay > p {
+    font-size: 2em;
+}
+
+.overlay > button {
+    padding-inline: 3em;
+    padding-block: 1em;
+    background: rgb(68, 7, 7);
+}
+
+.overlay:hover {
+    opacity: 0.8;
+}

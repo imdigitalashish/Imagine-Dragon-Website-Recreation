@@ -25,6 +25,12 @@ class StoreController extends Controller
                 $jsonObject = $request->all();
                 unset($jsonObject["token"]);
                 // return $jsonObject;
+                $fileNameUploaded = $request->file("image_of_item")->store("public/documents");
+                $fileNameUploaded =  explode("/", $fileNameUploaded)[2];
+
+                $fileNameUploaded = "storage/documents/" . $fileNameUploaded;
+                $jsonObject["image_of_item"] = $fileNameUploaded;
+
                 $store = storeItem::insert($jsonObject);
                 return response()->json(["response" => "tour added successfully"]);
             } else {

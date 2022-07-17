@@ -1,6 +1,7 @@
 import React from 'react'
 import Slider from "react-slick";
 import { larabackInstance } from '../axiosInstance';
+import MusicSection from '../components/merch/merch-component';
 
 import styles from "./index.module.css";
 
@@ -14,6 +15,7 @@ export default function Home(props) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
   };
 
   const { slider } = props;
@@ -34,9 +36,16 @@ export default function Home(props) {
 
   return (
     <div>
-      <Slider {...settings} className={styles.sliderOverride} >
-        {slides}
-      </Slider>
+      <div className="sliderContainer">
+        <Slider {...settings} className={styles.sliderOverride} >
+          {slides}
+        </Slider>
+      </div>
+
+
+      <MusicSection />
+
+
     </div>
   )
 }
