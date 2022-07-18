@@ -27,7 +27,7 @@ export default function Layout(props) {
             e.current.style.color = "white"
         })
         i.current.style.color = "red";
-        router.push(navReferencesTo[navReferences.indexOf(i)] == "home" ? "/" : navReferencesTo[navReferences.indexOf(i)]);
+        router.push(navReferencesTo[navReferences.indexOf(i)] == "home" ? "/" : "/"+navReferencesTo[navReferences.indexOf(i)]);
     }
 
 

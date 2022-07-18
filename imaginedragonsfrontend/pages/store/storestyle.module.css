@@ -1,0 +1,25 @@
+.singleStorePage { 
+    padding: 5em;
+    display: flex;
+    gap: 2em;
+}
+
+.singleStorePage > img {
+    background-color: white;
+    border-radius: 10px;
+    width: 30vw;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.StorePageContent {
+
+    color: white;
+    font-family: "Poppins";
+
+}
+
+.StorePageContent p {
+    opacity: 0.9;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from "./single-music.module.css";
-
+import Link from "next/link";
 
 export default function SingleMusicComponent({ data }) {
 
@@ -22,7 +22,9 @@ export default function SingleMusicComponent({ data }) {
 
 
                 <div>
-                    <h3>{data.music_title}</h3>
+                    <Link href={"music/"+data.id}>
+                        <h3>{data.music_title}</h3>
+                    </Link>
                     <p>{humanReableDate}</p>
 
 

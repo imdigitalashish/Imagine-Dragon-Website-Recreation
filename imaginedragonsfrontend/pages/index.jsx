@@ -45,7 +45,7 @@ export default function Home(props) {
       </div>
 
 
-      <MerchSection />
+      <MerchSection paginate={true} />
 
       <MusicSection />
 

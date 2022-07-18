@@ -1,6 +1,8 @@
 import Layout from '../components/layout/layout'
 import '../styles/globals.css'
 import Head from 'next/head'
+import MusicProvider from "../providers/musicProvider";
+import MerchProvider from '../providers/storeProvider';
 function MyApp({ Component, pageProps }) {
   return <Layout>
     <Head>
@@ -22,7 +24,12 @@ function MyApp({ Component, pageProps }) {
       />
 
     </Head>
-    <Component {...pageProps} />
+    <MusicProvider>
+      <MerchProvider>
+        <Component {...pageProps} />
+      </MerchProvider>
+    </MusicProvider>
+
 
   </Layout>
 }

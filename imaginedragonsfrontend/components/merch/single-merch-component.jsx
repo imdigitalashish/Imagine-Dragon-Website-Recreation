@@ -3,6 +3,8 @@ import React from 'react'
 
 import styles from "./single-merch-component.module.css";
 
+import Link from "next/link";
+
 export default function SingleMerchComponent({ data }) {
     console.log(data);
 
@@ -13,7 +15,7 @@ export default function SingleMerchComponent({ data }) {
                 <p>Price: {data.price_of_item}</p>
                 <p>Sizes Available: </p>
                 <p style={{ fontSize: "1.4em" }}>{data.list_of_sizes}</p>
-                <button>Buy Now</button>
+                <Link href={"/store/" + data.id}><button>Buy Now</button></Link>
 
             </div>
             <img src={`${process.env.LARABACK}/${data.image_of_item}`} alt="" />
