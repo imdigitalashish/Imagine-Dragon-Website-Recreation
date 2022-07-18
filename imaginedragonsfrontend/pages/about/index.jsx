@@ -29,6 +29,11 @@ export default function AboutPage() {
                 <p> </p>
                 <p>Noting that the past year has brought its share of “high highs and low lows,” Reynolds partly perceives <em>Origins</em> as a document of those triumphs and troubles. “I don’t believe in regrets, but in accepting my path where I am each day,” he says. “I wrote in the moment, and this record captures a lot of visceral feelings for me—some of it lamenting loss, some celebrating life. I can’t help but write from an emotional and vulnerable place, as it’s the only place of inspiration for me that’s real.”</p>
             </div>
+
+
+            
+
+
         </div>
     )
 }

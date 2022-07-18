@@ -1,0 +1,50 @@
+<h2>Add Tour</h2>
+
+
+<form [formGroup]="tourForm">
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Location of Tour</mat-label>
+            <input matInput formControlName="location_of_tour" placeholder="Eg: San Francisco">
+            <mat-icon matSuffix>pin_drop</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Choose tour date</mat-label>
+            <input matInput formControlName="tour_date" [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </p>
+    <p>
+
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Destination of Tour</mat-label>
+            <input matInput formControlName="destination_of_tour" placeholder="Eg: City Stadium">
+            <mat-icon matSuffix>pin_drop</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Ticket Link</mat-label>
+            <input matInput formControlName="tickets_link" placeholder="Eg: City Stadium">
+            <mat-icon matSuffix>airplane_ticket</mat-icon>
+        </mat-form-field>
+    </p>
+
+
+    <p>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Ticket Link For VIP</mat-label>
+            <input matInput formControlName="tickets_link_vip" placeholder="Eg: City Stadium">
+            <mat-icon matSuffix>airplane_ticket</mat-icon>
+        </mat-form-field>
+
+
+    </p>
+
+    <button (click)="addTourToList()" mat-raised-button color="primary">Add Tour</button>
+
+
+</form>

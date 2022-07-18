@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "imaginedragonsfrontend"
+		},
+		{
+			"path": "adminPanel"
 		}
 	],
 	"settings": {}

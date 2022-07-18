@@ -1,0 +1,14 @@
+<h2>Add Slider Image</h2>
+
+
+<mat-form-field appearance="outline">
+    <mat-label>File Name</mat-label>
+    <input matInput [formControl]="fileName" placeholder="Eg: San Francisco">
+    <mat-icon matSuffix>file_upload</mat-icon>
+
+</mat-form-field>
+
+
+<input type="file" (change)="addFileToFileList($event)" name="fileList" id="">
+
+<p><button mat-raised-button color="primary" (click)="uploadFileToSlider()">Add To Slider</button></p>
