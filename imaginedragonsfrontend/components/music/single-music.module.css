@@ -1,0 +1,71 @@
+.clsOfSVG {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    opacity: 0.54;
+}
+
+
+.singleMusicComp {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1em;
+    margin-block-start: 2.5em;
+    margin-inline: 7em;
+    display: flex;
+    height: 30vh;
+    justify-content: space-between;
+    border-radius: 19px;
+}
+
+.singleMusicComp img {
+    height: 100%;
+    border-radius: 19px;
+}
+
+.musicCompLeft {
+    display: flex;
+    gap: 2em;
+    text-align: left;
+}
+
+.musicCompLeft h3 {
+    color: white;
+    font-size: 3em;
+    letter-spacing: 0.109em;
+}
+
+.musicCompLeft p {
+    color: white;
+    opacity: 0.81;
+    letter-spacing: 0.06em;
+}
+
+
+.likeHolder { 
+    padding-top: 0.5em;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.musicButtonHolder {
+    padding-top: 2em;
+}
+
+.musicButtonHolder > a {
+    background: #0071B9;
+	color: white;
+    padding-block: 0.8em;
+    padding-inline: 0.5em;
+    display: flex;
+    gap: 0.7em;
+    align-items: center;
+    border-radius: 0.8em;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    width: fit-content;
+}

@@ -49,7 +49,7 @@ export default function Home(props) {
 
       <MusicSection />
 
-      <TourSection />
+      <TourSection paginate={true} />
 
     </div>
   )

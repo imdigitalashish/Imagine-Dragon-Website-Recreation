@@ -24,3 +24,27 @@
     justify-items: center;
     gap: 2em;
 }
+
+.allTourLink {
+    background: #C51D36;
+    width: 12vw;
+    height: 2em;
+    align-items: center;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    border-radius: 0.3em;
+    padding-left: 1.2em;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+.allTourLink > i{
+    background-color: #991D36;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3em;
+
+}

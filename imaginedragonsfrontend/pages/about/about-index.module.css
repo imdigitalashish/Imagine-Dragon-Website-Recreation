@@ -1,0 +1,47 @@
+.aboutPage {
+    text-align: center;
+    padding: 2em;
+}
+
+.aboutPage>h1 {
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    font-size: 8em;
+    animation: AnimateAboutPage 0.8s ease-in 0.0s 1 forwards;
+}
+
+@keyframes AnimateAboutPage {
+    100% {
+        padding-top: 0.5em;
+
+        font-size: 3em;
+        padding-bottom: 0.4em;
+    }
+}
+
+
+.content {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 1em;
+    height: 60vh;
+    overflow: scroll;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.content p {
+    width: 100%;
+    color: white;
+    text-align: left;
+    padding-inline: 6em;
+    font-size: 1.2em;
+
+    padding-top: 1em;
+    font-family: 'Poppins';
+    
+}
+

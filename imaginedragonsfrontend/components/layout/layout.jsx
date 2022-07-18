@@ -1,8 +1,11 @@
+import { useRouter } from 'next/router';
 import React, { useEffect, useRef } from 'react'
 import style from "./layout.module.css";
 export default function Layout(props) {
 
     const overAnimationRef = useRef();
+
+    const router = useRouter();
 
     useEffect(function () {
         setTimeout(function () {
@@ -13,16 +16,18 @@ export default function Layout(props) {
 
     const navReferences = [useRef(), useRef(), useRef(), useRef(), useRef(), useRef()];
     const navReferencesTo = ["home", "tour", "about", "music", "videos", "store"]
+    const navReferenesToIcon = ["fa-solid fa-house", "fa-solid fa-plane-arrival", "fa-solid fa-circle-info", "fa-solid fa-headphones", "fa-solid fa-circle-play", "fa-solid fa-shop"]
     let textReferences = navReferencesTo.map((currentUseRef, i) => {
         return (
-            <li key={i} onClick={(e) => handleNavItemPress(navReferences[i])} ref={navReferences[i]}>{navReferencesTo[i]}</li>
+            <li style={{ display: "flex", gap: "0.7em", alignItems: "center" }} key={i} onClick={(e) => handleNavItemPress(navReferences[i])} ref={navReferences[i]}><i className={navReferenesToIcon[i]}></i>{navReferencesTo[i]}</li>
         )
     });
     function handleNavItemPress(i) {
         navReferences.forEach((e) => {
-            e.current.style = ""
+            e.current.style.color = "white"
         })
         i.current.style.color = "red";
+        router.push(navReferencesTo[navReferences.indexOf(i)] == "home" ? "/" : navReferencesTo[navReferences.indexOf(i)]);
     }
 
 

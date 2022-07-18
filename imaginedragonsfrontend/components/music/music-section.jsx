@@ -28,15 +28,9 @@ export default function MusicSection() {
             <h2>
                 MUSIC
             </h2>
-
-
             <div className={styles.listOfAllMusicCards}>
                 {MusicCards}
             </div>
-
-
-
-
         </div>
     )
 }

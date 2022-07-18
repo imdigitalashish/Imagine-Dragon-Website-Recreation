@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { larabackInstance } from '../../axiosInstance';
 import SingleTicketCard from './single-ticket-card';
-
+import Link from "next/link";
 import styles from "./tour-section.module.css";
 
-export default function TourSection() {
+export default function TourSection({ paginate }) {
 
 
     const [toursTickets, setTourTickets] = useState([]);
@@ -13,8 +13,8 @@ export default function TourSection() {
     useEffect(() => {
         larabackInstance.get('/tours')
             .then((e) => {
-                setTourTickets(e.data)
-                console.log(toursTickets);
+                setTourTickets(paginate ? e.data.splice(0, 6) : e.data);
+                console.log(paginate ? toursTickets.splice(0, 7) : toursTickets);
             })
     }, []);
 
@@ -35,7 +35,16 @@ export default function TourSection() {
 
             <div className={styles.tourCardHolder}>
                 {TickerCards}
+                {paginate ? <Link href='/tour'>
+                    <div className={styles.allTourLink}>
+                        <p>All Dates</p>
+                        <i className="fa-solid fa-angle-right"></i>
+                    </div>
+                </Link> : <></>}
             </div>
+
+
+
 
         </div>
     )
